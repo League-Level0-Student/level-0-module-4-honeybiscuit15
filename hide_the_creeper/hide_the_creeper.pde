@@ -1,15 +1,24 @@
 void setup(){
   size(700,700); 
- background();
-/*2. Set your canvas size
-size(width, height) //in setup method
-3. Download a background image. Something with green where creeper can hide.
-     i) Save the image.
-     ii) Drop the file onto your sketch.
-     iii) Load it as the background
-PImage minecraft = loadImage("minecraft.jpg");     //in setup method
-minecraft.resize(width, height);     //in setup method
-background(minecraft);     //in setup method
+PImage minecraft = loadImage("minecraftforest.png"); 
+minecraft.resize(700, 700);    
+background(minecraft);    
+PImage creeper;     //at the top
+creeper=loadImage("creeper.jpg");     //in setup method
+creeper.resize(50, 50);     //in setup method
+image(creeper, mouseX, mouseY);     //in draw method
+}
+void draw(){
+if(mousePressed){
+fill(255,0,0);
+  ellipse(mouseX, mouseY, 25, 25);
+}    
+else{(mousePressed)=
+
+  ellipse(mouseX, mouseY, 25, 25);
+}
+  }
+    /*
 4. Load the creeper image into your sketch
      i) Download this Creeper to your desktop
      ii) Drop the image onto your sketch
@@ -32,5 +41,3 @@ else
      return false;
 }
 /*/
- 
-}
