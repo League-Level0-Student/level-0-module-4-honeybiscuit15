@@ -1,22 +1,25 @@
+PImage creeper; 
+int creeperX=100;
+int creeperY=100;
 void setup(){
+  noStroke();
   size(700,700); 
-PImage minecraft = loadImage("minecraftforest.png"); 
+PImage minecraft = loadImage("minecraftforest.jpg"); 
 minecraft.resize(700, 700);    
 background(minecraft);    
-PImage creeper;     //at the top
+ //at the top
 creeper=loadImage("creeper.jpg");     //in setup method
 creeper.resize(50, 50);     //in setup method
-image(creeper, mouseX, mouseY);     //in draw method
+image(creeper, creeperX, creeperY);     //in draw method
 }
 void draw(){
 if(mousePressed){
 fill(255,0,0);
-  ellipse(mouseX, mouseY, 25, 25);
+if(mouseX>creeperX&&mouseX<creeperX+creeper.width&&mouseY>creeperY&&mouseY<creeperY+creeper.height){
+fill(0,128,0);
+}  ellipse(mouseX, mouseY, 25, 25);
 }    
-else{(mousePressed)=
 
-  ellipse(mouseX, mouseY, 25, 25);
-}
   }
     /*
 4. Load the creeper image into your sketch
