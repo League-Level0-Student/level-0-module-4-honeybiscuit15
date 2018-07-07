@@ -18,11 +18,11 @@ public class SleepyHead {
          * JOptionPane.showConfirmDialog(null, "Is it a weekday?", "Sleepy Head", JOptionPane.YES_NO_OPTION);
          */
    
-       String answer= 
-    		   JOptionPane.showConfirmDialog(null, "Is it a weekday?", "Sleepy Head", JOptionPane.YES_NO_OPTION);
-if (answer.equals(isWeekday)) {
-	JOptionPane.showMessageDialog("");
-	}
+       //String answer= //
+    		   JOptionPane.showConfirmDialog(null, "Is it a weekday?","Sleppy Head",JOptionPane.YES_NO_OPTION);
+/*if (answer.equals(isWeekday)) {
+	JOptionPane.showMessageDialog("get up lazybones");
+	}*/
         /*
          * Print “sleep in” if it is a vacation or a weekend. If it’s a weekday,
          * print “get up lazybones!” If it is a weekday, and we are on vacation,

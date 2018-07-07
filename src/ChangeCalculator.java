@@ -28,8 +28,10 @@ public class ChangeCalculator {
 		System.out.println(total);
 
 		// Calculate how much money the user has and save it in a double variable
-
+double money=(10*(amount)+25*(total)+5*(answer)); 
 		// Tell the user how much money they have
+		 JOptionPane.showMessageDialog(null, "This is your amount"+ money);
+
 
 	}
 }
