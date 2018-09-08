@@ -13,19 +13,20 @@ public class HappyPet {
 			// 3.done
 			int task = JOptionPane.showOptionDialog(null, "What do want to do to make your pet happy", "HappyPet", 0,
 					JOptionPane.INFORMATION_MESSAGE, null,
-					new String[] { "cuddle", "take a walk ", "serve food", "serve water" }, null);
+					new String[] {  "None","take a walk ", "serve food", "serve water", "cuddle" }, null);
 
 			// 5.		 
 			for (happinessLevel=0 ;happinessLevel < task; happinessLevel++) {
-				JOptionPane.showMessageDialog(null,happinessLevel);
+				JOptionPane.showMessageDialog(null, happinessLevel, "Happiness Level",0);
 			}
 			// 6.
-		for (int i = 0; i < args.length; i++) {
-			
-		}
+if (happinessLevel == 10) {
+	JOptionPane.showMessageDialog(null, "You really love your" + answer);
+}
+		
 			// 4.done
 			if (task == 0) {
-				JOptionPane.showMessageDialog(null, answer + " is happy");
+				JOptionPane.showMessageDialog(null, answer + "ok");
 			} else if (task == 1) {
 				JOptionPane.showMessageDialog(null, answer + " is tired");
 			} else if (task == 2) {
@@ -33,7 +34,7 @@ public class HappyPet {
 			} else if (task == 3) {
 				JOptionPane.showMessageDialog(null, answer + " is hydrated");
 			}else {
-				JOptionPane.showMessageDialog(null, "error");
+				JOptionPane.showMessageDialog(null, "is happy");
 			}
 	
 			// 7. REPEAT steps 3 - 6 enough times to make your pet happy!
@@ -48,4 +49,5 @@ public class HappyPet {
 
 		// 6. If you determine the happiness level is large enough, tell the
 		// user that he loves his pet and use break; to exit for loop.
-// 7. REPEAT steps 3 - 6 enough times to make your pet happy!
+// 7. REPEAT steps 3 - 6 enough times to make your pet happ
+
