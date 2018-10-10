@@ -18,6 +18,11 @@ public class FruitQuiz extends KeyAdapter {
 		// 11. Make another question called "question2". Use question1 above as a guide.
 		question2 = new JLabel(
 				"<html>How many 0.5cm slices of breads can you cut from a whole bread that's 25cm long?<br> A: 1 <br> B: 25 <br> C: 39<br> D: None of the above</html>");
+		question3 = new JLabel(
+				"<html> \n" + 
+				"You're 3rd place right now in a race. What place are you in when you pass the person in 2nd place?<br> A: 1<br> B: 2<br> C: 3<br> D: None of the above </html>");
+		question4 = new JLabel(
+				"<html>Divide 30 by half and add ten.?<br> A: 40.5 <br> B: 50 <br> C: 70 <br> D: None of the above</html>");
 	}
 
 	@Override
@@ -29,14 +34,34 @@ public class FruitQuiz extends KeyAdapter {
 		int A = 65;
 		int B = 66;
 		int C = 67;
+		int D = 68; 
 		
 		// 14. Repeat steps 11, 12, and 13 for question3 and question4 - IMPORTANT: The
 		// questions must be in reverse order from top to bottom to work properly
 
 		// 12. If question2 is showing,
-		if (question2.isShowing()) {
-			if (keyCode == C) {
+		if (question4.isShowing()) {
+			if (keyCode == A) {
 				correct();
+				System.exit(4);
+			} else {
+				incorrect();
+			}
+
+		}
+		if (question3.isShowing()) {
+			if (keyCode == A) {
+				correct();
+				nextQuestion(question4);
+			} else {
+				incorrect();
+			}
+
+		}
+		if (question2.isShowing()) {
+			if (keyCode == A) {
+				correct();
+				nextQuestion(question3);
 			} else {
 				incorrect();
 			}
